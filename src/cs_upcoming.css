@@ -1,0 +1,61 @@
+/* Add these styles to your existing cs_base.css file */
+
+/* Enhance the look of the table on dark background */
+.table-dark {
+    background-color: #4e4e4e;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.table-dark th {
+    background-color: #6c757d; /* Darker shade for headers */
+}
+
+.table-dark th,
+.table-dark td {
+    border-color: #565656;
+    color: #d6bd18;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #575757; /* Slightly lighter shade for hover */
+}
+
+/* Enhance the responsive container */
+.container {
+    max-width: 1200px; /* Adjust this based on your design preference */
+}
+
+/* Centered page title with fancy underline */
+h2.text-center {
+    position: relative;
+    display: inline-block;
+}
+
+h2{
+    color:#b5a014;
+}
+h2.text-center:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 50%;
+    background-color: #b5a014;; /* White underline */
+}
+
+.flex-fill {
+    flex: 1;
+    padding: 0; /* Remove padding if you don't want any space between images */
+}
+
+.flex-fill img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+}
+
+
+/* Add extra styling as needed */

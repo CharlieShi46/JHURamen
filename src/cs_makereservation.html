@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!--  Font Awesome library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+
+    <!-- add favicon -->
+    <link rel="icon" href="cs_logo.jpeg" type="image/x-icon">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cs_base.css">
+
+    <link rel="stylesheet" href="cs_base.css">
+    <link rel="stylesheet" href="cs_makereservation.css">
+    <script rel="timer" href="cs_makereservation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            let timeLeft = 30 * 60; // 30 minutes in seconds
+
+            function updateDisplay() {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+
+                minutesElement.textContent = minutes.toString().padStart(2, '0');
+                secondsElement.textContent = seconds.toString().padStart(2, '0');
+            }
+
+            const timerId = setInterval(function() {
+                timeLeft--;
+
+                updateDisplay();
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerId);
+                    alert('Time is up! Please complete your reservation promptly.');
+                }
+            }, 1000);
+        });
+    </script>
+    <title>JHU Ramen - Payment</title>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+    <a href="cs_index.html" class="navbar-brand">JHU Ramen</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="cs_index.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="cs_menu.html" class="nav-link">MENU</a>
+            </li>
+            <li class="nav-item">
+                <a href="cs_about.html" class="nav-link">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a href="cs_upcoming.html" class="nav-link">UPCOMING</a>
+            </li>
+            <li class="nav-item">
+                <a href="cs_payment.html" class="nav-link">PAYMENT</a>
+            </li>
+            <li class="nav-item">
+                <a href="cs_makereservation.html" class="nav-link">RESERVE</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="container custom-padding-top">
+        <div class="py-5 text-center">
+
+            <h2>Make Reservation</h2>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <div id="timeRemainingSection">
+                    <h4>Time Remaining</h4>
+                    <div id="timeRemaining" class="countdown-timer">
+                        <span id="minutes" class="time-block">29</span>:<span id="seconds" class="time-block">59</span>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Reservation Details</h4>
+            <form class="needs-validation was-validated" novalidate="">
+                <div class="mb-3">
+                    <label for="reservationName">Name</label>
+                    <input type="text" class="form-control" id="reservationName" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Name is required.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="reservationPhone">Phone #</label>
+                    <input type="tel" class="form-control" id="reservationPhone" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Phone number is required.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="reservationEmail">Email</label>
+                    <input type="email" class="form-control" id="reservationEmail" placeholder="you@example.com" required>
+                    <div class="invalid-feedback">
+                        Please enter a valid email address.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="numberGuests">Number of Guests</label>
+                    <input type="number" class="form-control" id="numberGuests" required min="1" max="10">
+                    <div class="invalid-feedback">
+                        Please enter the number of guests.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="reservationDateTime">Date/Time</label>
+                    <input type="datetime-local" class="form-control" id="reservationDateTime" required>
+                    <div class="invalid-feedback">
+                        Please choose a date and time.
+                    </div>
+                </div>
+
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Book Table</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container custom-margin-top">
+            <div class="row justify-content-between">
+                <div class="col-md-4 footer-contact footer-middle">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 100 University Pkwy, Baltimore, MD 21210</p>
+                    <p><i class="fas fa-phone"></i> Call +1 5162050066</p>
+                    <p><i class="fas fa-envelope"></i> charlieshi46@gmail.com</p>
+                </div>
+                <div class="col-md-4 footer-middle">
+                    <h3>JHU Ramen</h3>
+                    <p>Where tradition meets taste in every bowl! Explore our authentic, flavorful ramen recipes that bring a piece of Japan right to your table.</p>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-hours footer-middle">
+                    <h3>Opening Hours</h3>
+                    <p>Everyday</p>
+                    <p>10.00 AM - 10.00 PM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                const $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+
+</body>
+</html>

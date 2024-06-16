@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!--  Font Awesome library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+
+    <!-- add favicon -->
+    <link rel="icon" href="cs_logo.jpeg" type="image/x-icon">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cs_base.css">
+    <link rel="stylesheet" href="cs_menu.css">
+    <script src = "cs_menu.js"> </script>
+    <title>JHU Ramen - Menu</title>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+        <a href="cs_index.html" class="navbar-brand">JHU Ramen</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="cs_index.html" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cs_menu.html" class="nav-link">MENU</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cs_about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cs_upcoming.html" class="nav-link">UPCOMING</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cs_payment.html" class="nav-link">PAYMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cs_makereservation.html" class="nav-link">RESERVE</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ml-auto cart-container">
+            <button class="btn btn-custom" type="button" id="cartButton">
+                <img src="Cart.png" alt="Cart" style="width: 24px; height: 24px;" /> Cart <span id="cartCount" class="badge badge-light">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="cartDropdown" class="cart-dropdown" style="display: none; position: absolute; right: 0; z-index: 1000;">
+        <ul id="cartItemsList" class="list-group">
+            <!-- Cart items will be added here dynamically -->
+        </ul>
+        <button id="checkoutButton" class="btn btn-success btn-block">Go to Checkout</button>
+    </div>
+
+    <div class="container">
+        <div class="panel pricing-table custom-margin-top py-5">
+            <div class="pricing-plan">
+                <img src="Vegan_Ramen.webp" alt="" class="pricing-img">
+                <h2 class="pricing-header">Vegan Ramen</h2>
+                <ul class="pricing-features">
+                    <li class="pricing-features-item">Number1 choice</li>
+                    <li class="pricing-features-item">"Good for health"</li>
+                </ul>
+                <span class="pricing-price">$13</span>
+                <a href="#/" class="pricing-button">Add to cart</a>
+            </div>
+
+            <div class="pricing-plan">
+                <img src="Kimchi_Ramen.webp" alt="" class="pricing-img">
+                <h2 class="pricing-header">Kimchi Ramen</h2>
+                <ul class="pricing-features">
+                    <li class="pricing-features-item">Chef's love</li>
+                    <li class="pricing-features-item">"Unique Korean style"</li>
+                </ul>
+                <span class="pricing-price">$13</span>
+                <a href="#/" class="pricing-button">Add to cart</a>
+            </div>
+
+            <div class="pricing-plan">
+                <img src="Miso_Ramen.jpeg" alt="" class="pricing-img">
+                <h2 class="pricing-header">Miso Ramen</h2>
+                <ul class="pricing-features">
+                    <li class="pricing-features-item">Traditional</li>
+                    <li class="pricing-features-item">"Try this!"</li>
+                </ul>
+                <span class="pricing-price">$13</span>
+                <a href="#/" class="pricing-button">Add to cart</a>
+            </div>
+        </div>
+</div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-4 footer-contact footer-middle">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 100 University Pkwy, Baltimore, MD 21210</p>
+                    <p><i class="fas fa-phone"></i> Call +1 5162050066</p>
+                    <p><i class="fas fa-envelope"></i> charlieshi46@gmail.com</p>
+                </div>
+                <div class="col-md-4 footer-middle">
+                    <h3>JHU Ramen</h3>
+                    <p>Where tradition meets taste in every bowl! Explore our authentic, flavorful ramen recipes that bring a piece of Japan right to your table.</p>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-hours footer-middle">
+                    <h3>Opening Hours</h3>
+                    <p>Everyday</p>
+                    <p>10.00 AM - 10.00 PM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $(document).scroll(function () {
+            const $nav = $("#mainNavbar");
+            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+    });
+</script>
+
+</body>
+</html>
+

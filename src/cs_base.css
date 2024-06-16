@@ -1,0 +1,162 @@
+
+body {
+    background: black;
+    font-family: "Nunito", sans-serif;
+}
+
+h2 {
+    color: white;
+}
+
+p{
+    color:white;
+}
+
+.black-container {
+    background-color: black; /* Sets the background color to black */
+    width: 200px; /* Sets the width of the container; adjust as needed */
+    height: 100px; /* Sets a height to make the container visible; adjust as needed */
+}
+/* CSS */
+.button-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #e3c819;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-link:hover, .button-link:focus {
+    background-color: #b5a014;
+    color: white;
+    text-decoration: none;
+}
+
+
+.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#mainNavbar .nav-link {
+    color: white;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #EA1C2C;
+}
+
+#mainNavbar .navbar-brand {
+    color: #d6bd18;
+    font-size: 2.5rem;
+}
+
+#headingGroup span {
+    color: #EA1C2C;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+.navbar.scrolled {
+    background: black ;
+    transition: background 200ms;
+}
+
+@media (max-width: 1200px) {
+    #headingGroup h1 {
+        font-weight: 100;
+        font-size: 3rem;
+    }
+    .blurb h2 {
+        font-size: 2rem;
+    }
+}
+
+.card-text-opinion{
+    font-family: Caveat;
+    color: black; /* This will override the white color set for the <p> elements */
+    font-size: larger;
+}
+
+.card-text-name {
+    color: black;
+    font-size: xx-large;
+    font-family: Caveat;
+}
+
+.jumbotron-heading{
+    font-size: xxx-large;
+}
+
+.profile-image{
+    width: 100px; /* size of the circle */
+    height: 100px; /* size of the circle */
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.custom-margin-top{
+    margin-top: 5rem;
+}
+
+.footer {
+    background-color: black;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    line-height: 1.8;
+    color: white;
+}
+
+.footer .footer-contact,
+.footer .footer-hours {
+    padding-left: 15px;
+}
+
+.footer .footer-middle {
+    text-align: center;
+}
+
+.footer-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.footer-icons a:hover {
+    color: #AAA;
+}
+
+
+/* Media query for mobile responsiveness */
+@media (max-width: 767px) {
+    .footer .footer-contact,
+    .footer .footer-middle,
+    .footer .footer-hours {
+        text-align: center;
+        padding: 20px 0;
+    }
+}
+
+

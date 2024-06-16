@@ -1,0 +1,13 @@
+.thank-you-container {
+    border: 2px  #333; /* Example border, adjust as needed */
+    margin-top: 8rem; /* Top margin */
+    margin-bottom: 4rem; /* Bottom margin before the footer */
+    padding: 1rem; /* Padding inside the container */
+
+}
+
+.thank-you-text {
+    font-size: 3rem; /* Larger text size */
+    color: white; /* Text color, adjust as needed */
+    font-weight: bold; /* Make the text bold */
+}
